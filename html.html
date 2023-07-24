@@ -1,0 +1,28 @@
+const blankFormElement = document.querySelector("#blank-form")
+const attachmentContainer = document.querySelector("#attachments")
+const addAttachmentBtn = document.querySelector("#add-attachment-btn")
+addAttachmentBtn.addEventListener("click", handleAttachmentBtnClick)
+    function cloneBlankForm(){
+                if (blankFormElement){
+                    const newBlankForm =blankFormElement.cloneNode(true)
+                    console.log(newBlankForm)
+                    return newBlankForm
+                }   
+            }
+    function handleAttachmentBtnClick(event){
+        if(event){
+            event.preventDefault()
+        }
+        const newForm = cloneBlankForm()
+        attachmentContainer.appendChild(newForm)
+    }
+
+//const managementFormInputElement = document.querySelector("#id_form-TOTAL-FORMS")
+
+//const totalFormValue = parseInt(managementFormInputElement.value)
+                        //var formRegex = new RegExp(`__prefix__`, 'g')
+                        //newBlankForm.innerHTML = newBlankForm.innerHTML.replace(formRegex, totalFormValue)
+                        //managementFormInputElement.value = totalFormValue + 1
+                        //newBlankForm.classList.add("attachment-form")
+                        //newBlankForm.classList.remove("hidden")
+                        //newBlankForm.removeAttribute("id")
